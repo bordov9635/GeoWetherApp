@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  GeoWeatherApp
 //
-//  Created by Siarhei Bardouski on 3/11/20.
+//  Created by Siarhei Bardouski on 3/13/20.
 //  Copyright © 2020 Siarhei Bardouski. All rights reserved.
 //
 

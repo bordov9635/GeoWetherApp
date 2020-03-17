@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673258B5241FC458009DC93A /* CityForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673258B4241FC458009DC93A /* CityForecast.swift */; };
+		673258B7241FF0B6009DC93A /* HourlyWeatherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673258B6241FF0B6009DC93A /* HourlyWeatherViewCell.swift */; };
 		676CFBC12419516800718725 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CFBC02419516800718725 /* AppDelegate.swift */; };
 		676CFBC32419516800718725 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CFBC22419516800718725 /* SceneDelegate.swift */; };
 		676CFBC52419516800718725 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CFBC42419516800718725 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 		676CFBD02419516900718725 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 676CFBCE2419516900718725 /* LaunchScreen.storyboard */; };
 		676CFBDB2419516A00718725 /* GeoWeatherAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CFBDA2419516A00718725 /* GeoWeatherAppTests.swift */; };
 		676CFBE62419516A00718725 /* GeoWeatherAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676CFBE52419516A00718725 /* GeoWeatherAppUITests.swift */; };
+		67F582F5241B8141005B0BA6 /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F582F4241B8141005B0BA6 /* WeatherForecast.swift */; };
+		67F58347241D180E005B0BA6 /* WeekDayWeatherViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67F58346241D180E005B0BA6 /* WeekDayWeatherViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		673258B4241FC458009DC93A /* CityForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityForecast.swift; sourceTree = "<group>"; };
+		673258B6241FF0B6009DC93A /* HourlyWeatherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HourlyWeatherViewCell.swift; sourceTree = "<group>"; };
 		676CFBBD2419516700718725 /* GeoWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		676CFBC02419516800718725 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		676CFBC22419516800718725 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +57,8 @@
 		676CFBE12419516A00718725 /* GeoWeatherAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoWeatherAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		676CFBE52419516A00718725 /* GeoWeatherAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoWeatherAppUITests.swift; sourceTree = "<group>"; };
 		676CFBE72419516A00718725 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67F582F4241B8141005B0BA6 /* WeatherForecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
+		67F58346241D180E005B0BA6 /* WeekDayWeatherViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekDayWeatherViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,10 @@
 				676CFBC02419516800718725 /* AppDelegate.swift */,
 				676CFBC22419516800718725 /* SceneDelegate.swift */,
 				676CFBC42419516800718725 /* ViewController.swift */,
+				67F58346241D180E005B0BA6 /* WeekDayWeatherViewCell.swift */,
+				673258B6241FF0B6009DC93A /* HourlyWeatherViewCell.swift */,
+				67F582F4241B8141005B0BA6 /* WeatherForecast.swift */,
+				673258B4241FC458009DC93A /* CityForecast.swift */,
 				676CFBC62419516800718725 /* Main.storyboard */,
 				676CFBCC2419516900718725 /* Assets.xcassets */,
 				676CFBCE2419516900718725 /* LaunchScreen.storyboard */,
@@ -263,7 +275,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				676CFBC52419516800718725 /* ViewController.swift in Sources */,
+				67F582F5241B8141005B0BA6 /* WeatherForecast.swift in Sources */,
 				676CFBC12419516800718725 /* AppDelegate.swift in Sources */,
+				67F58347241D180E005B0BA6 /* WeekDayWeatherViewCell.swift in Sources */,
+				673258B7241FF0B6009DC93A /* HourlyWeatherViewCell.swift in Sources */,
+				673258B5241FC458009DC93A /* CityForecast.swift in Sources */,
 				676CFBCB2419516800718725 /* GeoWeatherApp.xcdatamodeld in Sources */,
 				676CFBC32419516800718725 /* SceneDelegate.swift in Sources */,
 			);
