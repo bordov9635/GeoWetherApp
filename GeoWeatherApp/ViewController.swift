@@ -17,7 +17,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
     @IBOutlet weak var temperatureNowLabel: UILabel!
     @IBOutlet weak var weatherFiveDaysTableView: UITableView!
     @IBOutlet weak var hourlyWeatherCollectionView: UICollectionView!
-    @IBOutlet weak var weatherScrollView: UIScrollView!
     @IBOutlet weak var sunriseLabel: UILabel!
     @IBOutlet weak var sunsetLabel: UILabel!
     @IBOutlet weak var humidityLabel: UILabel!
@@ -29,7 +28,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
     
     
     let locationManager = CLLocationManager()
-    var degreeSymbol = "ºF"
+    var degreeSymbol = "º"
     var responseModel: WeatherForecast?
     var cityModel: CityForecast?
     var lat = 0.0
@@ -179,7 +178,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         
            let temperatureNow = responseModel?.currently
            if let currentTemp = temperatureNow?.temperature {
-            self.temperatureNowLabel.text = "\(String(describing: currentTemp))\(self.degreeSymbol)"
+            self.temperatureNowLabel.text = "\(String(describing: Int((currentTemp - 32) * 5 / 9)))\(self.degreeSymbol)"
            } else {
                self.temperatureNowLabel.text = "No data"
            }
@@ -228,7 +227,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
             self.windLabel.text = "No data"
         }
         if let nowTemperature = nowADay?.apparentTemperature{
-            self.feelsLikeTemp.text = "Чувствуется как:\n \(nowTemperature)\(self.degreeSymbol)"
+            self.feelsLikeTemp.text = "Чувствуется как:\n \(Int((nowTemperature - 32) / 1.8))\(self.degreeSymbol)"
         }
     }
     
@@ -259,7 +258,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
             print(String(describing: dateList?.icon))} else {
             cell.weather.text = "No data"
         }
-        if let hourlyTemp = dailyWeather?.temperature { cell.temp.text = String(describing: hourlyTemp)} else {
+        if let hourlyTemp = dailyWeather?.temperature { cell.temp.text = "\(String(describing: Int((hourlyTemp - 32) * 5 / 9)))\(degreeSymbol)"} else {
             cell.temp.text = "No data"
         }
     print(String(describing: dateList?.data[indexPath.row].temperature))
@@ -267,6 +266,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate, UITableViewDa
         return cell
     }
     
+   
       // MARK: -WeekWeatherTableViewCells
 public    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return responseModel?.hourly.data[1...7].count ?? 7
@@ -295,13 +295,12 @@ public    func tableView(_ tableView: UITableView, numberOfRowsInSection section
     
     let listArray = responseModel?.daily.data[indexPath.row + 1]
     if let minTemperature = listArray?.temperatureLow {
-        cell.minTempLabel.text = "\(String(describing: minTemperature))"
+        cell.minTempLabel.text = "\(String(describing: Int(( minTemperature - 32) / 1.8)))\(degreeSymbol)"
     } else {
         cell.minTempLabel.text = "No data"
     }
-    
     if let maxTemperature = listArray?.temperatureHigh {
-        cell.maxTempLabel.text = "\(String(describing: maxTemperature))"
+        cell.maxTempLabel.text = "\(String(describing: Int( (maxTemperature - 32) / 1.8)))\(degreeSymbol)"
     } else {
         cell.maxTempLabel.text = "No data"
     }

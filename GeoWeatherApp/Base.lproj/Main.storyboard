@@ -233,7 +233,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxV-3D-Xwh">
-                                                    <rect key="frame" x="32.5" y="100.5" width="42.5" height="20.5"/>
+                                                    <rect key="frame" x="32.5" y="100.5" width="42" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="1Rp-Fw-fie"/>
                                                     </constraints>
